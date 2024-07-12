@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+        }
+
+        .main-container {
+            /* background-color: rgb(68, 0, 255); */
+            bottom: 0;
+            position: absolute;
+        }
+        .sub-container{
+            display: flex;
+        }
+
+        .logo-container {
+            padding: 80px;
+            background-color: rgb(0, 0, 121);
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            height: 10rem;
+        }
+
+        .bottom-container {
+            background-color: black;
+            color: white;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bottom-texts-left {
+            margin-left: 50px;
+        }
+
+        .bottom-texts-right a,
+        p {
+            margin-right: 25px;
+            color: white;
+            display: inline;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            background-color: #4979ff;
+            color: white;
+            width: 60vw;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .column h2 {
+            font-weight: bold;
+        }
+
+        .column a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .column a:hover {
+            text-decoration: underline;
+        }
+        @media screen and (max-width: 800px) {
+       .sub-container{
+        display: flex;
+        flex-flow: column-reverse;
+       }
+       .logo-container{
+        width: 100%;
+       }
+       .footer-links{
+        width: 100%;
+       }
+        }
+
+         @media screen and (max-width: 480px) {
+       .main-container{
+        display: flex;
+        flex-flow: column-reverse;
+       }
+       .logo-container{
+        width: 100%;
+       }
+       .footer-links{
+        width: 100%;
+       }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <footer class="main-container">
+        <div class="sub-container">
+            <div class="logo-container">
+                <img class="logo"
+                    src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA3L2pvYjEwMjUtZWxlbWVudC04LXZfNC5qcGc.jpg"
+                    alt="" />
+            </div>
+            <div class="footer-links">
+
+                <div class="column">
+                    <h2>Shop</h2>
+                    <a href="#">Gift cards</a>
+                    <a href="#">Etsy Registry</a>
+                    <a href="#">Etsy blog</a>
+                    <a href="#">Sitemap</a>
+                    <a href="#">Etsy United Kingdom</a>
+                    <a href="#">Etsy Germany</a>
+                </div>
+                <div class="column">
+                    <h2>Sell</h2>
+                    
+                    <a href="#">Sell on Etsy</a>
+                    <a href="#">Teams</a>
+                </div>
+                <div class="column">
+                    <h2>About</h2>
+                    <a href="#">About</a>
+                    <a href="#">Etsy, Inc.</a>
+                    <a href="#">Policies</a>
+                </div>
+                <div class="column">
+                    <h2>More</h2>
+
+                    <a href="#">Forums</a>
+                    <a href="#">Investors</a>
+
+                    <a href="#">Affiliates & Creators</a>
+                    <a href="#">Careers</a>
+
+                    <a href="#">Press</a>
+                    <a href="#">Impact</a>
+                    <a href="#">Etsy Canada</a>
+                    <a href="#">Legal imprint</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="bottom-container">
+            <div class="bottom-texts-left">INDIA | ENGLISH (IN) | &#8377 (INR)</div>
+            <div class="bottom-texts-right">
+                <p>@2024 Etsy, Inc.</p> <a href="">Terms of Use</a> <a href="">Privacy</a> <a href="">Intrest-based
+                    ads</a><a href="">Local Shops</a> <a href="">Regions</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
