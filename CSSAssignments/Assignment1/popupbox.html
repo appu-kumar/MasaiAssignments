@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .main-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .button {
+        width: 80px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: aqua;
+        position: absolute;
+        text-align: center;
+        transition: width 0.3s ease, height 0.3s ease,background-color 0.3 ease;
+      }
+
+      .button:active {
+        width:400px;
+        height:400px;
+        background-color: maroon;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="square-box">This is the Info</div>
+      <div class="button">Read Info</div>
+    </div>
+  </body>
+</html>
