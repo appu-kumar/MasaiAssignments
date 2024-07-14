@@ -1,11 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newton School</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      nav {
+        background-image: linear-gradient(
+          to right,
+          rgb(2, 2, 245),
+          rgb(0, 0, 121),
+          rgb(4, 4, 65),
+          black
+        );
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        margin-left: 60px;
+      }
+      .logo img {
+        width: 150px;
+        height: 40px;
+      }
+      .nav-links-and-button {
+        margin-right: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 650px;
+      }
+      .nav-links-and-button ul {
+        display: flex;
+        justify-content: space-around;
+        width: 600px;
+        list-style: none;
+      }
+      .nav-links-and-button ul li a {
+        color: white;
+        text-decoration: none;
+      }
+      .signup {
+        padding: 3px;
+        width: 80px;
+        height: 33px;
+        border-radius: 5px;
+        color: white;
+        background-color: #1b5af0;
+        border: none;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <nav>
+        <div class="logo">
+          <img
+            src="https://cdn.prod.website-files.com/62e8d2ea218fb7676b6892a6/63a9a311ecd826aa5be44d4e_NS%20Logo%20primary%20white.png"
+            alt=""
+          />
+        </div>
+        <div class="nav-links-and-button">
+          <ul>
+            <li><a href="">Data Science & AI</a></li>
+            <li><a href="">B.Tech in CS & AI</a></li>
+            <li><a href="">Newton Edge</a></li>
+            <li><a href="">Refer & Earn</a></li>
+            <li><a href="">More</a></li>
+          </ul>
+          <button class="signup">Sign up</button>
+        </div>
+      </nav>
+    </div>
+  </body>
 </html>

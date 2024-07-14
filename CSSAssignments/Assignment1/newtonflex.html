@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        width: 60rem;
+      }
+      .text {
+        margin-left: 50px;
+      }
+      .text h1 {
+        font-size: 25px;
+        font-weight: 500;
+      }
+      .text h2 {
+        font-size: 15px;
+        margin-top: 10px;
+        font-weight: 400;
+      }
+      .navigate-button {
+        margin-right: 50px;
+        display: flex;
+      }
+      .left {
+        border: 2px solid rgb(182, 182, 182);
+        padding: 10px;
+        border-radius: 50px;
+      }
+      .right {
+        border: 2px solid rgb(182, 182, 182);
+        padding: 10px;
+        margin-left: 5px;
+        border-radius: 50px;
+      }
+      .yt-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        margin-top: 20px;
+        margin-left: 10px;
+      }
+      .box img {
+        width: 300px;
+        border-radius: 5px;
+      }
+      .box p {
+        width: 270px;
+        color: rgb(117, 117, 117);
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <nav>
+        <div class="text">
+          <h1>Winning With Newton School</h1>
+          <h2>Watch What Our Learners Have To Say</h2>
+        </div>
+        <div class="navigate-button">
+          <a href="">
+            <div class="left"><i class="fa-solid fa-chevron-left"></i></div>
+          </a>
+          <a href="">
+            <div class="right"><i class="fa-solid fa-chevron-right"></i></div>
+          </a>
+        </div>
+      </nav>
+      <div class="yt-container">
+        <div class="box">
+          <img
+            src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/09/jordan-gonzalez-dAgKqZjAVBg-unsplash--1-.jpg"
+            alt=""
+          />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Architecto, sapimus sit vitae numquam iste? Qui minus officia
+            molestiae voluptates reiciendis.
+          </p>
+        </div>
+        <div class="box">
+          <img
+            src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/09/jordan-gonzalez-dAgKqZjAVBg-unsplash--1-.jpg"
+            alt=""
+          />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Architecto, sapimus sit vitae numquam iste? Qui minus officia
+            molestiae voluptates reiciendis.
+          </p>
+        </div>
+        <div class="box">
+          <img
+            src="https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/09/jordan-gonzalez-dAgKqZjAVBg-unsplash--1-.jpg"
+            alt=""
+          />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Architecto, sapimus sit vitae numquam iste? Qui minus officia
+            molestiae voluptates reiciendis.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/52cf30c454.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
