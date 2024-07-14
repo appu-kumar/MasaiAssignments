@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meesho</title>
+    <style>
+        * {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ab0068;
+}
+
+.search-bar {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar {
+  background-color: #fff;
+  padding: 10px 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar ul li {
+  margin: 0;
+}
+
+.navbar ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  padding: 40px;
+}
+
+.filters {
+  width: 20%;
+}
+
+.filters h2 {
+  margin: 0;
+}
+
+.filters h3 {
+  margin-top: 20px;
+}
+
+.filters ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filters ul li {
+  margin-top: 10px;
+}
+
+.product-list {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(25% - 20px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.product-card h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-card p {
+  margin: 5px 0;
+  color: #333;
+}
+    </style>
+    
+  </head>
+  <body>
+    <header>
+      <div class="logo">meesho</div>
+      <div class="search-bar">
+        <input
+          type="text"
+          placeholder="Try Saree, Kurti or Search by Product Code"
+        />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Download App</a></li>
+          <li><a href="#">Become a Supplier</a></li>
+          <li><a href="#">Newsroom</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="navbar">
+      <ul>
+        <li><a href="#">Women Ethnic</a></li>
+        <li><a href="#">Women Western</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Kids</a></li>
+        <li><a href="#">Home & Kitchen</a></li>
+        <li><a href="#">Beauty & Health</a></li>
+        <li><a href="#">Jewellery & Accessories</a></li>
+        <li><a href="#">Bags & Footwear</a></li>
+        <li><a href="#">Electronics</a></li>
+      </ul>
+    </div>
+    <main>
+      <h1>Products For You</h1>
+      <div class="filters">
+        <h2>Filters</h2>
+        <div class="category">
+          <h3>Category</h3>
+          <ul>
+            <li><input type="checkbox" /> Women T-shirts</li>
+            <li><input type="checkbox" /> Women Tops And Tunics</li>
+            <li><input type="checkbox" /> Bedsheets</li>
+            <li><input type="checkbox" /> Bike Covers</li>
+            <li><input type="checkbox" /> Blouses</li>
+            <li><input type="checkbox" /> Cups & Mugs</li>
+            <li><input type="checkbox" /> Dupattas</li>
+            <li><input type="checkbox" /> Earrings & Studs</li>
+          </ul>
+        </div>
+      </div>
+      <div class="product-list">
+        <div class="product-card">
+          <img
+            src="https://images.meesho.com/images/products/57409918/iucvm_400.webp"
+            alt="Panda Backpack"
+          />
+          <h3>Trendy Alluring Women B...</h3>
+          <p>₹133 onwards</p>
+          <p>Free Delivery</p>
+          <p>3.7 &#9734; (43503 Reviews)</p>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://images.meesho.com/images/products/9873168/b6f05_400.webp"
+            alt="Extension Board"
+          />
+          <h3>Useful Extension Boards</h3>
+          <p>₹156 onwards</p>
+          <p>Free Delivery</p>
+          <p>3.7 &#9734; (97707 Reviews)</p>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://images.meesho.com/images/products/129258335/cbe62_400.webp"
+            alt="Yellow T-shirt"
+          />
+          <h3>Urbane Glamorous Women...</h3>
+          <p>₹162 onwards</p>
+          <p>Free Delivery</p>
+          <p>3.7 &#9734; (22796 Reviews)</p>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://images.meesho.com/images/products/141077180/1aciv_400.webp"
+            alt="Trendy Shorts"
+          />
+          <h3>Stylish Trendy Women Sh...</h3>
+          <p>₹219 onwards</p>
+          <p>Free Delivery</p>
+          <p>4.1 &#9734; (10119 Reviews)</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
