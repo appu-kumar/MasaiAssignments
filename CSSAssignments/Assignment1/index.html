@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journax</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 90vw;
+            margin: auto;
+        }
+
+        header .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header .header>h1 {
+            font-weight: 900;
+        }
+
+        header .header>div hr {
+            width: 30px;
+            margin: 4px;
+
+        }
+
+        header .header>div {
+            margin: 20px;
+        }
+
+        header .header>button {
+
+            border-left: 1px solid rgba(0, 0, 0, .1);
+            border-right: 1px solid rgba(0, 0, 0, .1);
+            border-top: none;
+            border-bottom: none;
+            padding: 16px 22px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 140%;
+        }
+
+        header .header>button:hover {
+            background-color: rgb(173, 90, 90);
+        }
+
+        nav {
+            width: 60vw;
+            margin: auto;
+
+        }
+
+        nav .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        section#s1 {
+            width: 90vw;
+            margin: auto;
+        }
+
+
+
+        section#s1 .container {
+
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        section#s1 .container .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 40%;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+
+        section#s1 .container img {
+            width: 60%;
+        }
+
+        section#s1 h3 {
+            font-weight: 200;
+        }
+
+        section#s1 .content button {
+            width: 90px;
+            padding: 5px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.199)
+        }
+
+        section#s1 .content .bottom {
+            margin-top: 40px;
+        }
+
+        section#s1 .content .bottom div {
+            margin-top: 10px;
+        }
+
+        section#s2 {
+            max-width: 90vw;
+            margin: auto;
+        }
+
+        section#s2 .container {
+            margin-top: 20px;
+            margin-top: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        section#s2 .container img {
+            width: 100%;
+
+        }
+
+        section#s2 .container div {
+            width: 30%;
+        }
+
+
+
+        section#s3 {
+            width: 90vw;
+            margin: auto;
+        }
+
+        section#s3 .container {
+            margin-top: 40px;
+
+        }
+
+        section#s3 .container .heading {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+
+        }
+
+        section#s3 .container .heading span {
+            margin-left: 10px;
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        section#s3 .container .cards {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+        section#s3 .container .card h3 {
+            margin-top: 6px;
+            margin-bottom: 12px;
+            font-weight: 400;
+            font-size: 16px;
+
+        }
+
+
+        section#s4 {
+            width: 90vw;
+            margin: auto;
+        }
+
+        section#s4 .container {
+            margin-top: 40px;
+            max-width: 100%;
+            position: relative;
+
+        }
+
+        section#s4 .container div img {
+            width: 100%;
+        }
+
+        section#s4 .container .content {
+            background-color: white;
+            width: 50%;
+            padding: 40px;
+            position: absolute;
+            top: 80px;
+            left: 40%;
+
+        }
+
+        section#s4 .container .content .top {
+            margin-bottom: 100px;
+        }
+
+        section#s4 .container .content .bottom p {
+            margin-bottom: 20px;
+        }
+
+        section#s5 {
+            width: 90vw;
+            margin: auto;
+        }
+
+        section#s6 {
+            width: 90vw;
+            margin: auto;
+        }
+
+        section#s5 .container {
+            margin-top: 40px;
+
+        }
+
+        section#s5 .container .heading span {
+            margin-left: 15px;
+            font-size: 4dvh;
+            display: inline-block;
+
+        }
+
+        section#s5 .container .cards .card .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            width: auto;
+        }
+
+        section#s5 .container .cards .card .content img {
+            border-radius: 50%;
+            width: 50%;
+            height: 80px;
+        }
+
+        section#s5 .container .cards .card>p {
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        section#s5 .container .cards .card2 .date {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        section#s5 .container .cards .card2 .date:nth-last-of-type(1) {
+            margin-right: 10px;
+        }
+
+        section#s5 .container .cards .card2 .date:nth-last-of-type(2) {
+            margin-right: 10px;
+        }
+
+        section#s5 .container .cards .card2 .date:nth-last-of-type(3) {
+            margin-right: 10px;
+        }
+
+        footer .container {
+            width: 100%;
+            background-color: rgb(17, 17, 17);
+        }
+
+        footer .container .grid {
+            padding: 40px 20px;
+            color: white;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "a1 a2 a3 a4";
+        }
+
+
+        footer .container .grid .icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        footer .container li {
+            list-style: none;
+        }
+
+        footer .container .grid>div:nth-of-type(4) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        footer .container .grid>div:nth-of-type(1) {
+            grid-area: a1;
+        }
+
+        footer .container .grid>div:nth-of-type(2) {
+            grid-area: a2;
+        }
+
+        footer .container .grid>div:nth-of-type(3) {
+            grid-area: a3;
+        }
+
+        footer .container .grid>div:nth-of-type(4) {
+            grid-area: a4;
+        }
+
+        footer .rights {
+            padding: 20px 10px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        footer .rights .left {
+            font-size: 40px;
+        }
+
+        footer .rights .right {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .world-news-container {
+            padding: 100px;
+            padding-top: 0px;
+            display: flex;
+        }
+
+        .world-news-left {
+            display: flex;
+            justify-content: flex-start;
+            flex-flow: column;
+            width: 55rem;
+            margin: auto;
+        }
+
+        .world-news-left img {
+            width: 50rem;
+        }
+
+        .world-news-left img:hover {
+            transform: scale(1.1);
+        }
+
+        .world-news-left h2 {
+            width: 50rem;
+            margin-top: 20px;
+            font-size: 40px;
+            font-weight: 300;
+        }
+
+        .world-news-left h3 {
+            width: 35rem;
+            font-size: 18px;
+            font-weight: 300;
+            color: rgb(95, 95, 95);
+            margin-top: 20px;
+            border-right: 2px solid rgb(163, 163, 163);
+            padding: 15px;
+        }
+
+        .world-news-right {
+            width: 30rem;
+        }
+
+        .world-news-right img {
+            width: 25rem;
+            border-radius: 5px;
+        }
+
+        .world-news-right img:hover {
+            transform: scale(1.1);
+        }
+
+        .world-news-right h2 {
+            width: 18em;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .world-news-right h3 {
+            width: 23rem;
+            font-size: 15px;
+            font-weight: 300;
+            color: rgb(85, 85, 85);
+            margin-top: 10px;
+        }
+
+        .world-news-right .date {
+            font-size: 13px;
+            margin-top: 15px;
+            border-bottom: 0.5px solid rgb(151, 151, 151);
+            padding-bottom: 20px;
+            color: rgb(95, 95, 95);
+        }
+
+        .world-news-author {
+            display: flex;
+            width: 50rem;
+        }
+
+        .world-news-author h3 {
+            width: 35rem;
+        }
+
+        .world-news-author .editor {
+            width: 5rem;
+            padding: 30px;
+            display: flex;
+        }
+
+        .editor {
+            display: flex;
+            align-items: center;
+        }
+
+        .editor img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+        }
+
+        .editor div {
+            margin-left: 10px;
+            width: 10rem;
+            margin-bottom: 20px;
+        }
+
+        .editor h2 {
+            font-size: 15px;
+        }
+
+        .editor h4 {
+            font-size: 12px;
+        }
+
+        .staff-writers {
+            padding: 15px 0px 0px 100px;
+            /* padding-top: 0px; */
+            display: flex;
+            flex-flow: column;
+        }
+
+        .staff-card {
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .staff-card img {
+            height: 340px;
+            width: 309px;
+            max-width: 340px;
+            min-height: 340px;
+            max-width: 100%;
+        }
+
+        .staff-text h1 {
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        .card-staff {
+            display: flex;
+        }
+
+        .name-staff {
+            font-size: 18px;
+            color: rgb(41, 41, 41);
+            padding: 5px;
+        }
+
+        .position-of-staff {
+            font-size: 15px;
+            color: rgb(77, 77, 77);
+            padding: 5px;
+        }
+
+        .staff-last-img {
+            display: flex;
+            width: 100%;
+            margin-top: 150px;
+            margin-bottom: 150px;
+        }
+
+        .left-staff-last-img {
+            background-color: rgb(181, 214, 250);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-flow: column;
+            padding: 20px;
+        }
+
+        .left-staff-last-img p {
+            padding: 20px;
+            font-weight: 400;
+            color: rgb(77, 77, 77);
+        }
+
+        .left-staff-last-img h3 {
+            padding: 20px;
+            font-weight: 400;
+            color: rgb(77, 77, 77);
+        }
+
+        .left-staff-last-img h4 {
+            padding: 20px;
+            font-weight: 400;
+            color: rgb(77, 77, 77);
+        }
+
+        .left-staff-last-img div {
+            padding: 20px;
+            font-weight: 400;
+            color: rgb(77, 77, 77);
+        }
+
+        .left-staff-last-img div input {
+            height: 40px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+            padding-left: 20px;
+            background-color: rgb(181, 214, 250);
+            border: 1px solid black;
+        }
+
+        .left-staff-last-img div button {
+            height: 40px;
+            width: 125px;
+            border-radius: 5px;
+            border: none;
+            margin-left: 15px;
+            background-color: black;
+            color: white;
+        }
+
+        .right-staff-last-img img {
+            padding: 100px;
+            padding-bottom: 0px;
+            background-color: rgb(252, 238, 177);
+            border-radius: 10px;
+            margin-left: 50px;
+        }
+
+        /* header{
+            position:relative;
+        } */
+        header .ft ul {
+            list-style: none;
+            display: none;
+
+        }
+
+        header .menu:active .ft>ul {
+            background-color: aquamarine;
+            width: 600px;
+            height: 600px;
+            cursor: pointer;
+            display: initial;
+            padding: 100px 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            font-size: 40px;
+            transition-duration: 100s;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        div#hi {
+            text-align: end;
+            background-color: white;
+            padding: 8px;
+            width: auto;
+            display: flex;
+            position: fixed;
+            top: 80vh;
+            left: 75vw;
+        }
+
+        /*tablets                */
+        @media (width <=1250px) {}
+
+        /*mobile */
+        @media(width <=750px) {
+            footer .container .grid {
+                padding: 40px 20px;
+                color: white;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas: "a1 a2 a3"
+                                     "a4";
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="hi">
+        <img src="https://cdn.prod.website-files.com/660fedec1ab54b2595c51e30/667c03cd060cd8ccaf0c252a_ic-webflow.svg">
+        <span style="margin-left:5px; display:inline-block">GET TEMPLATE</span>
+    </div>
+    <header>
+        <div class="header">
+            <div class="menu">
+                <i class="fa-solid fa-bars"></i>
+                <div class="ft">
+                    <ul>
+                        <li>Pages</li>
+                        <li>About us</li>
+                        <li>News</li>
+                        <li>Authors</li>
+                        <li>Newsletter Plans</li>
+                        <li>Contact us</li>
+                        <li>Sign Up</li>
+                    </ul>
+                </div>
+            </div>
+            <h1>JOURNAX</h1>
+            <button>subcribe</button>
+        </div>
+    </header>
+    <hr>
+    <nav>
+        <div class="nav">
+            <span>Health</span>
+            <span>Politics</span>
+            <span>Sports</span>
+            <span>World News</span>
+            <span>Business</span>
+            <span>Technology</span>
+            <span>Cart(0)</span>
+        </div>
+    </nav>
+    <hr>
+
+    <section id="s1">
+        <div class="container">
+            <div class="content">
+                <div class="top">
+                    <button>World News</button>
+                    <h1>Unveiling the stories & significance of historic landmarks</h1>
+                </div>
+                <div class="bottom">
+                    <p>Discover the rich heritage, architectural marvels, and pivotal events that have shaped these
+                        iconic sites. Through our in-depth coverage, gain a deeper appreciation for the legacy.</p>
+                    <div style="display:flex">
+                        <h3>Marvin McKinney</h3>
+                        <hr style="width:10px; height:0px;margin:10px" />
+                        <h3>June 29, 2024</h3>
+                    </div>
+                </div>
+                <hr style="width:100%" />
+            </div>
+            <img
+                src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb0b7962fe6b39d24c427_news-main-13.jpg">
+        </div>
+    </section>
+
+    <section id="s2">
+        <div class="container">
+            <div class="card">
+                <img
+                    src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb0e29ed33b549f7d769c_news-thumb-14-p-500.jpg">
+                <h2>The rise of next-gen sports stars</h2>
+                <p>From breakthrough performances to inspiring stories, we spotlight the next generation of athletes
+                    making waves in the sports world.</p>
+                <h3>Leslie Alexander</h3>
+            </div>
+            <div class="card">
+                <img
+                    src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb1252d8c203c005b88fe_news-thumb-15-p-500.jpg">
+                <h2>The rise of next-gen sports stars</h2>
+                <p>From breakthrough performances to inspiring stories, we spotlight the next generation of athletes
+                    making waves in the sports world.</p>
+                <h3>Leslie Alexander</h3>
+            </div>
+            <div class="card">
+                <img
+                    src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb15df0b53dd34be6a682_news-thumb-16-p-500.jpg">
+                <h2>The rise of next-gen sports stars</h2>
+                <p>From breakthrough performances to inspiring stories, we spotlight the next generation of athletes
+                    making waves in the sports world.</p>
+                <h3>Leslie Alexander</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="s3">
+        <div class="container">
+            <div class="heading">
+                <img
+                    src="https://cdn.prod.website-files.com/660fedec1ab54b2595c51e30/667bc22dac0387a9d0909da6_heading-icon.svg">
+                <span>Editor’s Choice</span>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <img
+                        src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa6660746e795774eb436_editor-news-01.jpg">
+                    <h3>International community expresses hope for resolution</h3>
+                    <h3>World News</h3>
+                </div>
+                <div class="card">
+                    <img
+                        src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa71e7dde9e3d024847d7_editor-news-02.jpg">
+                    <h3>International community expresses hope for resolution</h3>
+                    <h3>World News</h3>
+                </div>
+                <div class="card">
+                    <img
+                        src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa762dba43638cc6ed29d_editor-news-03.jpg">
+                    <h3>International community expresses hope for resolution</h3>
+                    <h3>World News</h3>
+                </div>
+
+                <div class="card">
+                    <img
+                        src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667fa7b9c213d85ea6857b50_editor-news-04.jpg">
+                    <h3>International community expresses hope for resolution</h3>
+                    <h3>World News</h3>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="s4">
+        <div class="container">
+            <div>
+                <img
+                    src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb128538b017fc4bfc5d0_news-main-15.jpg">
+            </div>
+            <div class="content">
+                <div class="top">
+                    <h1> Advancements in electric
+                        vehicle technology</h1>
+                </div>
+                <div class="bottom">
+                    <p>Explore the latest innovations shaping the future
+                        of electric vehicles. From cutting-edge battery
+                        technologies to advancements in autonomous
+                        driving.</p>
+                    <div style="display:flex">
+                        <h3>Marvin McKinney</h3>
+                        <hr style="width:10px; height:0px;margin:10px" />
+                        <h3>June 29, 2024</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style="height:1px; background-color:rgba(0, 0, 0, 0.845); margin-top:60px;"></div>
+
+    <section class="world-news s5">
+        <div class="heading">
+            <img
+                src="https://cdn.prod.website-files.com/660fedec1ab54b2595c51e30/667bc22dac0387a9d0909da6_heading-icon.svg">
+            <span>World's News</span>
+        </div>
+        <div class="world-news-container">
+            <div class="world-news-left">
+                <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d352670fefb0f3ab47c18_news-main-02.jpg"
+                    alt="" />
+                <h2>
+                    UN report highlights growing threat of food insecurity in
+                    developing nations
+                </h2>
+                <div class="world-news-author">
+                    <h3>
+                        A recent United Nations report has brought attention to the
+                        escalating issue of food insecurity in developing nations. The
+                        report highlights how economic instability, climate change, and
+                        ongoing conflicts are exacerbating hunger and malnutrition,
+                        putting millions at risk.
+                    </h3>
+                    <div class="editor">
+                        <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d058ec1e876bede9c10b2_author-main-04-p-500.jpg"
+                            alt="" />
+                        <div>
+                            <h2>Leslie Alexander</h2>
+                            <h4>Editorialist</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="world-news-right">
+                <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667eb3aba694ed3ca5f4b3d4_news-thumb-27-p-800.jpg"
+                    alt="" />
+                <h2>
+                    Global leaders convene to discuss new trade agreements, aim to
+                    strengthen economic cooperation
+                </h2>
+                <h3>
+                    By forging stronger economic ties, the participating nations hope
+                    to stimulate trade, create jobs, and promote sustainable
+                    development in an increasingly interconnected world.
+                </h3>
+                <div class="date">June 28, 2024 - Guy Hawkins</div>
+                <h3>
+                    Global leaders convene to discuss new trade agreements, aim to
+                    strengthen economic cooperation
+                </h3>
+                <div class="date">June 28, 2024 - Guy Hawkins</div>
+
+                <h3>Us presidential administration Biden's first year in office</h3>
+                <div class="date">June 27, 2024 - Kristin Watson</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="staff-writers s6">
+        <div class="heading">
+            <img
+                src="https://cdn.prod.website-files.com/660fedec1ab54b2595c51e30/667bc22dac0387a9d0909da6_heading-icon.svg">
+            <span>Editor’s Choice</span>
+        </div>
+        <div class="card-staff">
+            <div class="staff-card">
+                <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d0511259c918e72509691_author-main-01-p-800.jpg"
+                    alt="" />
+                <div class="name-staff">Theresa Webb</div>
+                <div class="position-of-staff">Senior Reporter</div>
+            </div>
+            <div class="staff-card">
+                <img src=" https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d0539f5cd6d3a8e8f15a0_author-main-02-p-800.jpg"
+                    alt="" />
+                <div class="name-staff">Marvin McKinney</div>
+                <div class="position-of-staff">Publisher</div>
+            </div>
+            <div class="staff-card">
+                <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d056c783d376b3fe21bb7_author-main-03-p-800.jpg"
+                    alt="" />
+                <div class="name-staff">Wade Warren</div>
+                <div class="position-of-staff">Content Writer</div>
+            </div>
+            <div class="staff-card">
+                <img src="https://cdn.prod.website-files.com/667bd81876339d31af9381fa/667d058ec1e876bede9c10b2_author-main-04.jpg"
+                    alt="" />
+                <div class="name-staff">Leslie Alexander</div>
+                <div class="position-of-staff">Editorialist</div>
+            </div>
+        </div>
+
+        <div class="staff-last-img">
+            <div class="left-staff-last-img">
+                <p>Subscribe Our Newsletter</p>
+                <h3>
+                    Empower yourself subscribe to our expert analysis and insights
+                </h3>
+                <h4>
+                    From breaking news to thought-provoking opinion pieces, our
+                    newsletter keeps you informed.
+                </h4>
+                <div>
+                    <input type="text" placeholder="Enter your e-mail..." />
+                    <button>Subscribe Now</button>
+                </div>
+            </div>
+            <div class="right-staff-last-img">
+                <img src="https://cdn.prod.website-files.com/660fedec1ab54b2595c51e30/667d0971bf5cc7d1c3d3ff9c_cta-mobile.png"
+                    alt="" />
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="grid">
+                <div class="ft">
+                    <ul>
+                        <li> Pages</li>
+                        <li>About us</li>
+                        <li>News</li>
+                        <li>Authors</li>
+                        <li>Newsletter Plans</li>
+                        <li>Contact us</li>
+                        <li>Sign Up</li>
+                    </ul>
+                </div>
+                <div class="ft">
+                    <ul>
+                        <li> Category</li>
+                        <li>Health</li>
+                        <li>Politics</li>
+                        <li>Sports</li>
+                        <li>World News</li>
+                        <li>Business</li>
+                        <li>Technology</li>
+                    </ul>
+                </div>
+                <div class="ft">
+
+                    <ul>
+                        <li> Resources</li>
+                        <li>Privacy Policy</li>
+                        <li>Advertise</li>
+                        <li>Terms & Conditions</li>
+                        <li>License</li>
+                        <li>Style Guide</li>
+                    </ul>
+                </div>
+                <div class="ft">
+                    <div class="icons">
+                        <i class="fa-brands fa-square-x-twitter"></i>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-solid fa-rss"></i>
+                    </div>
+                    <div style="text-align:right">info@example.com</div>
+                    <input type="text" placeholder="Advertise with us" style="padding:15px;width:auto;">
+                </div>
+            </div>
+            <div class="hline" style="height:0.1px; background-color:white"></div>
+            <div class="rights">
+                <div class="left">Journax</div>
+                <div class="right">
+                    <h4>&copy;2024 Journax.</h4>
+                    <h4>Designed by Nixar. Powered by Webflow.</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://kit.fontawesome.com/ddbbfe1c32.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
